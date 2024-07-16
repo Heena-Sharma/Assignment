@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="records"
+            type="com.assignment.data.Records" />
+    </data>
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:padding="@dimen/_2sdp"
+    app:cardCornerRadius="@dimen/_2sdp"
+    app:cardElevation="@dimen/_2sdp"
+    android:background="@color/white"
+    android:layout_margin="@dimen/_5sdp"
+    android:minHeight="@dimen/_80sdp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:padding="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/_80sdp"
+        android:background="@color/gray_white">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_record"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            imageFromUrl="@{records.mainImageURL}"
+            app:shapeAppearanceOverlay="@style/circleImageView"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:alpha="0.8"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_5sdp"
+
+            android:text="@{records.title}"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/iv_record"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_funded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:maxLines="2"
+              app:layout_constraintTop_toBottomOf="@+id/appCompatTextView"
+            android:paddingStart="@dimen/_15sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:text="@{records.shortDescription}"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_record" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+</layout>

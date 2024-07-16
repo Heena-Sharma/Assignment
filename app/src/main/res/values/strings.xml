@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="record_fragment_label">Record Fragment</string>
+
+    <string name="search">Search...</string>
+    <string name="no_result_found">Sorry!!! \n No result found</string>
+
+</resources>
