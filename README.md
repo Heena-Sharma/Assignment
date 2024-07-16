@@ -52,6 +52,6 @@ glideVersion used-  '4.10.0'
 
 ### Screenshots###
 
--[Screenview1](screenshots/screenview1.png "A list of Data")
--[Screenview2](screenshots/screenview2.png "Collapsed View")
--[Screenview3](screenshots/screenview3.png "Filter Data")
+-[screenview1](screenshots/screenview1.png "A list of Data")
+-[screenview2](screenshots/screenview2.png "Filter Data")
+-[screenview3](screenshots/screenview3.png "Collapsed View")
