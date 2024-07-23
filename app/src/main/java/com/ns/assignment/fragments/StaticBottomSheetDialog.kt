@@ -5,13 +5,16 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.ns.assignment.R
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -26,7 +29,7 @@ fun StaticBottomSheet() {
     Scaffold(
         floatingActionButton = {
             FloatingActionButton(onClick = { scope.launch { sheetState.show() } }) {
-                Icon(imageVector = Icons.Filled.Add, contentDescription = "Show Bottom Sheet Dialogue")
+                Icon(imageVector = Icons.Filled.MoreVert, contentDescription = "Show Bottom Sheet Dialogue")
             }
         }
     )
@@ -55,10 +58,10 @@ fun BottomSheetContent(list1: List<Pair<String, Int>>) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.dp)
+            .padding(dimensionResource(id = R.dimen._16sdp))
     ) {
-        Text("List 1", fontWeight = FontWeight.Bold)
-        Spacer(modifier = Modifier.height(8.dp))
+        Text("List 1", fontWeight = FontWeight.Bold, modifier = Modifier.padding(dimensionResource(id = R.dimen._14sdp)))
+        Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen._8sdp)))
         LazyColumn {
             items(list1) { item ->
                 Row(
@@ -67,13 +70,13 @@ fun BottomSheetContent(list1: List<Pair<String, Int>>) {
                 ) {
                     Text(
                         text = item.first,
-                        fontSize = 14.sp,
-                        modifier = Modifier.padding(6.dp)
+                        fontSize = dimensionResource(id = R.dimen._14sdp).value.sp,
+                        modifier = Modifier.padding(dimensionResource(id = R.dimen._14sdp))
                     )
                     Text(
                         item.second.toString(),
-                        fontSize = 14.sp,
-                        modifier = Modifier.padding(6.dp)
+                        fontSize = dimensionResource(id = R.dimen._14sdp).value.sp,
+                        modifier = Modifier.padding(dimensionResource(id = R.dimen._14sdp))
                     )
                 }
             }
