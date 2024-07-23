@@ -38,9 +38,7 @@ it Uses viewpager2 for setup Image Carousel. Recyclerview for List data and a se
 'androidx.core:core-ktx:1.6.0'
 - [LiveData]- Build data objects that notify views when the underlying database changes.
 'androidx.core:core-ktx:1.6.0'
-- [Navigation] - Handle everything needed for in-app navigation.
-'androidx.navigation:navigation-fragment-ktx:2.3.5'
- 'androidx.navigation:navigation-ui-ktx:2.3.5'
+
 - [Glide]- for image loading
 glideVersion used-  '4.10.0'
  kapt "com.github.bumptech.glide:compiler:$rootProject.glideVersion"
