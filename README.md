@@ -23,10 +23,9 @@ it Uses viewpager2 for setup Image Carousel. Recyclerview for List data and a se
   'androidx.appcompat:appcompat:1.3.1'
 - [Android KTX]  - Write more concise, idiomatic Kotlin code.
   'androidx.core:core-ktx:1.6.0'
-- [Data Binding] -  bind observable data to UI elements. enabled Data Binding in gradle file.
+- [View Binding] -  bind observable data to UI elements. enabled View Binding in gradle file.
    buildFeatures {
-        viewBinding true
-        dataBinding true
+        viewBinding true        
     }
 -[Material UI]- For creating UI using support material dependency.
 'com.google.android.material:material:1.4.0'
