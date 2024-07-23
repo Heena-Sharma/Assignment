@@ -5,7 +5,7 @@ This README would normally document whatever steps are necessary to get your app
 ### Assignment ###
 
 * This application is for learning jetpack components like navigation, live Data, data binding. this projects has
-single list of data which is showing using recycler view.
+single list of data which is showing using recycler view and a floating action button to show static data in a bottom sheet Dialog.
 * Version- 1.0
 * Reference- https://developer.android.com/jetpack/getting-started
 
@@ -14,6 +14,7 @@ This project uses the Gradle build system. To build this project
 * Summary of set up
 - this project setup with MVVM, Data binding, Live Data, Used json data from assets folder named with "testdata.json" and "imagedata.json"
 it Uses viewpager2 for setup Image Carousel. Recyclerview for List data and a search view to filter data in given list. To filter Data used Filter class for that.
+- used Jetpack compose for bottom sheet dialog.
 
 
 
